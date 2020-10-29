@@ -15,12 +15,24 @@ while (pcListNmber.lenght < 16) {
 var min = 1;
 var max = 100;
 var round = 5; //per ora poi 84
-
+ //BONUS
+ var difficoltà = parseInt(prompt( "scegli unm livello fra 1 2 e 3"));
+ switch (difficoltà){
+   case 1:
+   max = 100;
+   break;
+   case 2:
+   max = 80;
+   break;
+   case 3:
+   max = 50;
+   break;
+ }
  //definisco Array
- var pcListNumber [];
+ var pcListNumber = [];
 
  // genero numero randomico
- while ( pcListNumber < 16;){
+ while ( pcListNumber < 16){
    var numeroRandom = Math.floor(Math.random()* (max - min + 1)+min);
    if( !numArray(numeroRandom, pcListNumber)){
       pcListNumber.push(numeroRandom);
@@ -40,11 +52,11 @@ function numArray(number, numberArr){
 //condizioni per continuare il gioco
  var vinto =false;
  var isAlive = true;
- var sceltaUtenteArr [];
+ var sceltaUtenteArr = [];
 
  // ciclo while
  while (!vinto && isALive){
-   var sceltaUtente = parseInt(prompt("Devi scegliere un numero fra" + min "e" + max));
+   var sceltaUtente = parseInt (prompt("Devi scegliere un numero fra" + min "e" +  max ));
        if(numArray(sceltaUtente, sceltaUtenteArr)){
          alert.("Numero già inserito, riteta, sarai più fortunato!");
        } else{
